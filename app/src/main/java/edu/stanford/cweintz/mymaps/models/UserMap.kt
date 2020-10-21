@@ -1,3 +1,5 @@
 package edu.stanford.cweintz.mymaps.models
 
-data class UserMap(val title: String, val places: List<Place>)
+import java.io.Serializable
+
+data class UserMap(val title: String, val places: List<Place>) : Serializable

@@ -1,12 +1,16 @@
 package edu.stanford.cweintz.mymaps
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.stanford.cweintz.mymaps.models.Place
 import edu.stanford.cweintz.mymaps.models.UserMap
 import kotlinx.android.synthetic.main.activity_main.*
 
+const val EXTRA_USER_MAP = "EXTRA_USER_MAP"
+private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,7 +20,17 @@ class MainActivity : AppCompatActivity() {
         // Set layout manager on the recycler view
         rvMaps.layoutManager = LinearLayoutManager(this)
         // Set adapter on the recycler view
-        rvMaps.adapter = MapsAdapter(this, userMaps)
+        rvMaps.adapter = MapsAdapter(this, userMaps, object: MapsAdapter.OnClickListener {
+            override fun onItemClick(position: Int) {
+                Log.i(TAG,"onItemClick $position")
+                // When user taps on view in RV,
+                val intent = Intent(this@MainActivity, DisplayMapActivity::class.java)
+                intent.putExtra(EXTRA_USER_MAP, userMaps[position])
+                startActivity(intent)
+            }
+
+        })
+
     }
 
     private fun generateSampleData(): List<UserMap> {
