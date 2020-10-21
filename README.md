@@ -11,7 +11,7 @@ Time spent: **3** hours spent in total
 The following **required** functionality is completed:
 
 * [X] The list of map titles is displayed.
-* [ ] After tapping on a map title, the associated markers in the map are shown.
+* [x] After tapping on a map title, the associated markers in the map are shown.
 * [ ] The user is able to create a new map.
 
 The following **extensions** are implemented:
