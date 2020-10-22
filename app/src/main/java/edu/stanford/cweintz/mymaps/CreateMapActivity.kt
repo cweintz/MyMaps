@@ -91,8 +91,8 @@ class CreateMapActivity : AppCompatActivity(), OnMapReadyCallback {
             Log.i(TAG, "onMapLongClickListener")
             showAlertDialog(latLng)
         }
-        val siliconValley = LatLng(37.4, -122.1)
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(siliconValley, 9f))
+        val siliconValley = LatLng(37.5, -122.25)
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(siliconValley, 10f))
     }
 
     private fun showAlertDialog(latLng: LatLng) {
