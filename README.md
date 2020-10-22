@@ -4,15 +4,15 @@
 
 **My Maps** displays a list of maps, each of which show user-defined markers with a title, description, and location. The user can also create a new map. 
 
-Time spent: **3** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Functionality 
 
 The following **required** functionality is completed:
 
 * [X] The list of map titles is displayed.
-* [x] After tapping on a map title, the associated markers in the map are shown.
-* [ ] The user is able to create a new map.
+* [X] After tapping on a map title, the associated markers in the map are shown.
+* [X] The user is able to create a new map.
 
 The following **extensions** are implemented:
 
